@@ -14,7 +14,7 @@ h1:hover {
 h3 {
   color: #1ca20d;
 }
-.banner1 {
+.flexProp {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,8 +23,31 @@ h3 {
   margin: 2rem;
 }
 .image-container {
+  border: 2px solid black;
   height: 400px;
   width: 100%;
   background: url('/LESS/images//image1.avif');
   background-repeat: no-repeat;
+}
+.section {
+  flex-direction: column;
+}
+.section .element {
+  color: green;
+}
+.section .element .element2 {
+  color: #5656a4;
+}
+.lazy-eval {
+  color: green;
+  font-size: 100px;
+}
+.block {
+  color: red;
+  color: blue;
+}
+.block .inner {
+  font-size: 4rem;
+  color: white;
+  background-color: white;
 }

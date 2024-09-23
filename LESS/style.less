@@ -3,7 +3,7 @@
 @body-bg-color:rgb(253, 241, 209);
 @on-hover:darken(@heading_colors , 40%);
 
-@flex-property:banner1;
+@flex-property:flexProp;
 
 @images: '/LESS/images/';
 
@@ -34,8 +34,49 @@ h3{
 }
 
 .image-container{
+    border: 2px solid black;
     height:400px;
     width:100%;
     background:url('@{images}/image1.avif');
     background-repeat: no-repeat;
 }
+
+
+// variable using another values
+
+@primary:  green;
+@secondary: rgb(86, 86, 164);
+
+.section {
+    flex-direction: column;
+    @color: primary;
+    @color2 : secondary;
+    .element {
+        color: @@color;
+        .element2{
+            color: @secondary;
+        }
+    }
+}
+
+
+
+.lazy-eval{
+    color: @primary;
+    font-size: @var;
+}
+
+@var : @a;
+@a : 100px;
+
+
+.block {
+    color: red; 
+    .inner {
+        font-size: 4rem;
+        color:white;
+        background-color: $color;  //color:blue
+    }
+    color: blue;  
+
+} 
