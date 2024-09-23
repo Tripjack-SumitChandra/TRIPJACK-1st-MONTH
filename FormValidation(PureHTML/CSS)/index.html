@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="form-container">
+        <form method="post">
+            <div class="form-data">
+                <div>
+                    <label for="first-name">Firstname</label>
+                    <input type="text" placeholder="firstname" minlength="3" required>
+                </div>
+                <div>
+                    <label for="first-name">Lastname:</label>
+                    <input type="text" placeholder="Lastname" minlength="3"  required>
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" min="18" placeholder="Age" required>
+                </div>
+                <div>
+                    <label for="first-name">PhoneNo:</label>
+                    <input type="tel" placeholder="Phone Number" minlength="10" maxlength="12" required>
+                </div>
+                <div>
+                    <label for="DOB">Date of Birth:</label>
+                    <input type="date" placeholder="Date Of Birth" required>
+                </div>
+                <div>
+                    <label for="first-name">E-mail:</label>
+                    <input type="email" placeholder="Email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                </div>
+                <div>
+                    <label for="first-name">Password:</label>
+                    <input type="password" minlength="8" maxlength="20" placeholder="Password" required>
+                </div>
+    
+                <button class="submit-button" type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

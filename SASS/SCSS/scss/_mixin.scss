@@ -1,0 +1,11 @@
+@mixin flexproperty{     //4. mixin  -- to combine two-three functionality in one varibale which can be used further
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin font-size($size , $text-color){   //5. mixin with parameters
+    font-size: $size;
+    color: $text-color;
+}

@@ -1,0 +1,13 @@
+
+.example {
+    display: flex;
+    transition: all 0.3s;
+    color:rgb(237, 165, 165);
+    font-size:100px;
+
+    &:hover{
+        font-size: 150px;
+        color: brown;
+    }
+  }
+  

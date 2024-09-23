@@ -1,0 +1,41 @@
+@heading_colors: rgb(207, 25, 25);
+@subheading-color:rgb(28, 162, 13);
+@body-bg-color:rgb(253, 241, 209);
+@on-hover:darken(@heading_colors , 40%);
+
+@flex-property:banner1;
+
+@images: '/LESS/images/';
+
+body{
+    background: @body-bg-color;
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    color:@heading_colors;
+}
+h1:hover{
+    font-size:40px;
+    transition:1.3s all ease;
+    color: @on-hover;
+}
+h3{
+    color: @subheading-color;
+}
+
+.@{flex-property}{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 4rem;
+    border:2px solid black;
+    margin:2rem;
+}
+
+.image-container{
+    height:400px;
+    width:100%;
+    background:url('@{images}/image1.avif');
+    background-repeat: no-repeat;
+}
