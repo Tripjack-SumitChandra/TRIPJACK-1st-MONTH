@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="parent__container">
+        <h1>Weather-App</h1>
+        
+       <div>
+        <input type="text" name="city" id="city" placeholder="Enter city name">
+        <button id="search"><img src="./images/search.svg" alt="search"></button>
+       </div>
+
+        <div class="city__data__container">
+            <div class="city__data" >
+                <h1>Feels_like : </h1>
+                <p><span id="feels-like"></span>°C</p>
+            </div>
+            <div class="city__data">
+                <h1>Grnd_level : </h1>
+                <p id="grnd_level"></p>
+            </div>
+            <div class="city__data">
+                <h1>Humidity : </h1>
+                <p id="humidity"></p>
+            </div>
+            <div class="city__data">
+                <h1>Pressure : </h1>
+                <p id="pressure"></p>
+            </div>
+            <div class="city__data">
+                <h1>Sea level : </h1>
+                <p id="sea_level"></p>
+            </div>
+            <div class="city__data">
+                <h1>Tempreature : </h1>
+                <p><span id="temp"></span>°C</p>
+            </div>
+            <div class="city__data">
+                <h1>Tempreature-max : </h1>
+                <p> <span id="temp-max"></span>°C</p>
+            </div>
+            <div class="city__data">
+                <h1>Tempreature-min : </h1>
+                <p> <span id="temp-min"></span>°C</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js" ></script>
+</body>
+</html>
