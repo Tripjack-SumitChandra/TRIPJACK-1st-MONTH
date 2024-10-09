@@ -1,25 +1,17 @@
 import React from 'react';
+import Component3 from './Components/Component3';
+import Component1 from './Components/Component1';
 
 class App extends React.Component {
   constructor(){
     super();
-    this.state = {
-      surname : "chandra", 
-    }
   }
   render() {
-    return(
-    <>
-      <h1>Name is displaying using props and Surname by using State.</h1>
-      <h2>Hi {this.props.name} {this.state.surname}</h2>
+    return <>
+      <Component1 property="this is the property of component 1 "/>
+      <Component3 />
     </>
-    )}
+}
 }
 
-class About extends React.Component {
-  render(){
-    return <p>This is the about class</p>
-  }
-}
-
-export {App, About}
+export default App;
