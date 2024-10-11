@@ -45,5 +45,6 @@ printname.apply(obj2 , ['Dehradun' , 'Uttrakhand'])
 
 console.log('using Bind method')
 let duplicatefunction = printname.bind(obj1 , 'Dehradun' , 'Uttrakhand' )  //bind(object , argument1 , argument2 )
-// console.log(duplicatefunction)     //bind makes a duplicate of a function and we pass the object inside it , and this will refer to this passed object
+// printname.bind(obj1 , 'Dehradun' , 'Uttrakhand' )  //bind(object , argument1 , argument2 )
+console.log(duplicatefunction)     //bind makes a duplicate of a function and we pass the object inside it , and this will refer to this passed object
 duplicatefunction()         
