@@ -7,11 +7,8 @@ class Component2 extends React.Component{
         super(props);
         this.state = {
             c2_state:"This is from Component2 State",
-            c2_counter : 0
+            c2_counter : this.props.counter_prop
         }
-    }
-    componentDidMount() {
-        console.log('C2 ComponentDidMount called ....')
     }
     static getDerivedStateFromProps(props, state){
         console.log('GetDerivedStateFromProps called ......')
@@ -21,6 +18,12 @@ class Component2 extends React.Component{
         else{
             return null;
         }
+    }
+    shouldComponentUpdate(){
+        console.log('shouldComponentUpdate called ...')
+        console.log("props" , this.props)
+        console.log("state" , this.state)
+        return true;
     }
     render(){
         console.log('Render of component2 is called ...')
@@ -34,6 +37,19 @@ class Component2 extends React.Component{
             </div>
         </>
     }
+    getSnapshotBeforeUpdate(prevProps , prevState){
+        console.log('getSnapshotBeforeUpdate called ....')
+        console.log(prevProps);
+        console.log(prevState);
+        return "sumit"
+    }
+    componentDidUpdate(prevProps , prevState , snapshots){
+        console.log('componentDidUpdate called ....')
+        console.log('prevProps', prevProps)
+        console.log('prevState', prevState)
+        console.log('Snapshot' , snapshots)
+    }
+    
 }
 
 export default Component2;
